@@ -2,85 +2,72 @@
   padding: 0;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
 }
 
-.home__sales {
+body {
   display: grid;
-  grid-gap: 16px;
-  width: 1000px;
-  margin: auto;
-  grid-template-areas:
-    "box0 box1 box2 box3"
-    "box0 box4 box5 box6";
+  grid-template-areas: "header" "main" "footer";
+}
+header {
+  grid-area: header;
+  height: 200px;
+  background-color: purple;
+}
+main {
+  grid-area: main;
+  height: 200px;
+  background-color: red;
+  display: grid;
+  grid-template-areas: "herobanner" "sale__list" "home__sales" "recommended__list" "home__recommended";
 }
 
+.home__heroBanner {
+  grid-area: heroBanner;
+}
+.home__sales {
+  grid-area: home__sales;
+  display: grid;
+  grid-template-areas: "box0 box1 box2 box3" "box0 box4 box5 box6";
+}
 .home__sales--main {
   grid-area: box0;
+  background-color: yellow;
   height: 100%;
-  background-color: purple;
 }
-
 .home__sales--mini1 {
   grid-area: box1;
-  height: 200px;
-  background-color: red;
+  background-color: pink;
+  height: 260px;
 }
-
 .home__sales--mini2 {
   grid-area: box2;
-  height: 200px;
-  background-color: blue;
+  background-color: powderblue;
+  height: 260px;
 }
-
 .home__sales--mini3 {
   grid-area: box3;
-  height: 200px;
-  background-color: pink;
+  background-color: gold;
+  height: 260px;
 }
-
 .home__sales--mini4 {
   grid-area: box4;
-  height: 200px;
-  background-color: yellow;
+  background-color: purple;
+  height: 260px;
 }
-
 .home__sales--mini5 {
   grid-area: box5;
-  height: 200px;
-  background-color: green;
+  background-color: black;
+  height: 260px;
 }
-
 .home__sales--mini6 {
   grid-area: box6;
-  height: 200px;
-  background-color: orange;
-}
-
-.home__recommended {
-  display: grid;
-  grid-gap: 16px;
-  width: 1000px;
-  margin: auto;
-  grid-template-areas: "box7 box8 box9 box10";
-}
-
-.home__recommended--mini1 {
-  grid-area: box7;
-  height: 200px;
-  background-color: yellow;
-}
-.home__recommended--mini2 {
-  grid-area: box8;
-  height: 200px;
   background-color: red;
+  height: 260px;
 }
-.home__recommended--mini3 {
-  grid-area: box9;
+
+footer {
+  grid-area: footer;
   height: 200px;
-  background-color: pink;
-}
-.home__recommended--mini4 {
-  grid-area: box10;
-  height: 200px;
-  background-color: purple;
+  background-color: green;
 }

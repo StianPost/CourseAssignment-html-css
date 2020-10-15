@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+header {
+  grid-area: header;
+  height: 200px;
+  background-color: purple;
+}
+main {
+  grid-area: main;
+  height: 100vh;
+  background-color: red;
+}
+
+.games {
+  height: 500px;
+  display: grid;
+  grid-template-areas:
+    "main-game gameOne gameTwo gameThree"
+    "main-game gameFour gameFive gameSix";
+}
+
+.main-game {
+  background-color: rosybrown;
+  grid-area: main-game;
+}
+
+.gameOne {
+  background-color: rosybrown;
+  grid-area: gameOne;
+}
+
+.gameTwo {
+  background-color: yellow;
+  grid-area: gameTwo;
+}
+
+.gameThree {
+  background-color: pink;
+  grid-area: gameThree;
+}
+
+.gameFour {
+  background-color: purple;
+  grid-area: gameFour;
+}
+
+.gameFive {
+  background-color: orange;
+  grid-area: gameFive;
+}
+
+.gameSix {
+  background-color: gray;
+  grid-area: gameSix;
+}
+
+footer {
+  grid-area: footer;
+  height: 200px;
+  background-color: green;
+}
