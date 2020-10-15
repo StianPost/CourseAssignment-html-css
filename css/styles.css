@@ -11,63 +11,137 @@ body {
 }
 header {
   grid-area: header;
-  height: 200px;
   background-color: purple;
-}
-main {
-  grid-area: main;
-  height: 200px;
-  background-color: red;
-  display: grid;
-  grid-template-areas: "herobanner" "sale__list" "home__sales" "recommended__list" "home__recommended";
+  display: flex;
 }
 
-.home__heroBanner {
-  grid-area: heroBanner;
+.header__nav {
+  border: pink 2px solid;
 }
-.home__sales {
-  grid-area: home__sales;
+
+.nav__li {
+  display: inline-block;
+}
+
+.nav__links {
+  color: white;
+}
+
+.logo__img {
+  width: 200px;
+}
+
+main {
+  grid-area: main;
+  width: 100%;
   display: grid;
-  grid-template-areas: "box0 box1 box2 box3" "box0 box4 box5 box6";
+  justify-content: center;
 }
-.home__sales--main {
-  grid-area: box0;
+
+section {
+  width: 1000px;
+}
+
+.hero__banner {
+  height: 500px;
+  width: 100%;
+  background-color: hotpink;
+}
+
+.games {
+  height: 460px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-areas:
+    "main-game gameOne gameTwo gameThree"
+    "main-game gameFour gameFive gameSix";
+}
+
+.main-game {
+  background-color: rosybrown;
+  grid-area: main-game;
+}
+
+.gameOne {
+  background-color: rosybrown;
+  grid-area: gameOne;
+}
+
+.gameTwo {
   background-color: yellow;
-  height: 100%;
+  grid-area: gameTwo;
 }
-.home__sales--mini1 {
-  grid-area: box1;
+
+.gameThree {
   background-color: pink;
-  height: 260px;
+  grid-area: gameThree;
 }
-.home__sales--mini2 {
-  grid-area: box2;
-  background-color: powderblue;
-  height: 260px;
-}
-.home__sales--mini3 {
-  grid-area: box3;
-  background-color: gold;
-  height: 260px;
-}
-.home__sales--mini4 {
-  grid-area: box4;
+
+.gameFour {
   background-color: purple;
-  height: 260px;
+  grid-area: gameFour;
 }
-.home__sales--mini5 {
-  grid-area: box5;
-  background-color: black;
-  height: 260px;
+
+.gameFive {
+  background-color: orange;
+  grid-area: gameFive;
 }
-.home__sales--mini6 {
-  grid-area: box6;
-  background-color: red;
+
+.gameSix {
+  background-color: gray;
+  grid-area: gameSix;
+}
+
+.recommended {
   height: 260px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-areas: "recommendedOne recommendedTwo recommendedThree recommendedFour";
+}
+
+.recommendedOne {
+  grid-area: recommendedOne;
+  background-color: teal;
+}
+
+.recommendedTwo {
+  grid-area: recommendedTwo;
+  background-color: yellow;
+}
+
+.recommendedThree {
+  grid-area: recommendedThree;
+  background-color: lightblue;
+}
+
+.recommendedFour {
+  grid-area: recommendedFour;
+  background-color: orange;
 }
 
 footer {
   grid-area: footer;
-  height: 200px;
+  height: 100px;
+  display: grid;
   background-color: green;
+  grid-template-areas: "footer__nav" "footer__nav__legal";
+  justify-content: center;
+}
+
+.footer__nav {
+  border: solid 2px hotpink;
+  grid-area: footer__nav;
+}
+
+.footer__nav__legal {
+  border: solid 2px red;
+  grid-area: footer__nav__legal;
+}
+
+.footer__nav__li {
+  display: inline-block;
+  margin-right: 16px;
+}
+.footer__link {
+  color: lightgrey;
 }
