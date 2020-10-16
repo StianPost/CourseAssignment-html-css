@@ -3,20 +3,56 @@
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
+  font-size: 26px;
 }
 
 body {
   display: grid;
   grid-template-areas: "header" "main" "footer";
 }
+
 header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
   grid-area: header;
-  background-color: purple;
+  background-color: rgba(14, 46, 94, 0.9);
+  margin-bottom: 36px;
+}
+
+.header__top {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo__img {
+  width: 150px;
+}
+
+.nav__searchbar {
+  width: 700px;
+  height: 50px;
+}
+
+.header__icons {
+  color: white;
+}
+
+.fa-shopping-cart,
+.fa-user,
+.fa-bell {
+  font-size: 40px;
+  padding: 0px 8px;
 }
 
 .header__nav {
-  border: pink 2px solid;
+  background-color: rgba(27, 32, 61, 0.9);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 650;
 }
 
 .nav__li {
@@ -25,10 +61,7 @@ header {
 
 .nav__links {
   color: white;
-}
-
-.logo__img {
-  width: 200px;
+  padding: 0px 8px;
 }
 
 main {
@@ -46,6 +79,22 @@ section {
   height: 500px;
   width: 100%;
   background-color: hotpink;
+}
+
+.sale__headings {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8px 0px;
+}
+
+.sale1 {
+  flex: 1;
+}
+.sale2 {
+  flex: 1;
+}
+.sale3 {
+  flex: 2;
 }
 
 .games {
@@ -92,6 +141,10 @@ section {
   grid-area: gameSix;
 }
 
+.home__recommended {
+  margin: 8px 0px;
+}
+
 .recommended {
   height: 260px;
   display: grid;
@@ -120,11 +173,12 @@ section {
 }
 
 footer {
+  margin-top: 32px;
   grid-area: footer;
   height: 100px;
   display: grid;
   background-color: green;
-  grid-template-areas: "footer__nav" "footer__nav__legal";
+  grid-template-areas: "footer__nav footer__icons" "footer__nav__legal";
   justify-content: center;
 }
 
@@ -142,6 +196,12 @@ footer {
   display: inline-block;
   margin-right: 16px;
 }
+
 .footer__link {
   color: lightgrey;
+}
+
+.footer__icons {
+  grid-area: footer__icons;
+  border: lime 2px solid;
 }

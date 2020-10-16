@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <section class="header__top">
+      <div class="header__top">
         <div class="header__logo">
           <img
             class="logo__img"
@@ -21,32 +21,47 @@
             alt="image of the gamehub log"
           />
         </div>
-        <div class="header__searchbar"></div>
-        <div class="header__icons"></div>
-      </section>
+        <div class="header__searchbar">
+          <form>
+            <input class="nav__searchbar" type="text" placeholder="search" />
+          </form>
+        </div>
+        <div class="header__icons">
+          <i class="fas fa-shopping-cart"></i>
+          <i class="fas fa-user"></i>
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
       <div class="header__nav">
-        <nav>
+        <nav class="header__navigation">
           <ul>
             <li class="nav__li"><a href="#" class="nav__links">Store</a></li>
-            <li class="nav__li"><a href="#" class="nav__links">Support</a></li>
+            <li class="nav__li">
+              <a href="#" class="nav__links">Support</a>
+            </li>
             <li class="nav__li">
               <a href="#" class="nav__links">Contact us</a>
             </li>
             <li class="nav__li">
               <a href="#" class="nav__links">Sell Game</a>
             </li>
-            <li class="nav__li"><a href="#" class="nav__links">Sign In</a></li>
+            <li class="nav__li">
+              <a href="#" class="nav__links">Sign In</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
       <section>
-        <div>Hero</div>
         <div class="hero__banner"></div>
       </section>
       <section>
-        <div>Headings</div>
+        <div class="sale__headings">
+          <p class="sale1">Now on Sale</p>
+          <p class="sale2">Featured deals</p>
+          <p class="sale3">Weekly sales</p>
+        </div>
         <div class="games">
           <div class="main-game">0</div>
           <div class="gameOne">1</div>
@@ -58,7 +73,7 @@
         </div>
       </section>
       <section>
-        <div>Headings</div>
+        <div><p class="home__recommended">Recommended</p></div>
         <div class="recommended">
           <div class="recommendedOne">1</div>
           <div class="recommendedTwo">2</div>
@@ -71,10 +86,21 @@
       <section>
         <div class="footer__nav">
           <ul>
-            <li class="footer__nav__li"><a class="footer__link href="#">Submit Your Game</a></li>
-            <li class="footer__nav__li"><a class="footer__link href="#">FAQ</a></li>
-            <li class="footer__nav__li"><a class="footer__link href="#">Sell Game</a></li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Submit Your Game</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">FAQ</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Sell Game</a>
+            </li>
           </ul>
+        </div>
+        <div class="footer__icons">
+          <i class="fas fa-share-alt"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook-square"></i>
         </div>
         <div class="footer__nav__legal">
           <ul>
