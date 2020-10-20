@@ -187,13 +187,13 @@ footer {
   color: lightgrey;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) /*Desktop*/ {
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px) /*Tablet*/ {
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) /*Mobile*/ {
   header {
     flex-wrap: wrap;
   }
