@@ -3,7 +3,7 @@
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
-  font-size: 26px;
+  font-size: 1rem;
 }
 
 body {
@@ -12,12 +12,12 @@ body {
 }
 
 header {
+  grid-area: header;
+  border: solid 1px green;
   position: sticky;
   top: 0px;
   left: 0px;
-  grid-area: header;
-  background-color: rgba(14, 46, 94, 0.9);
-  margin-bottom: 36px;
+  background-color: rgba(14, 6, 95, 0.9);
 }
 
 .header__top {
@@ -27,32 +27,33 @@ header {
 }
 
 .logo__img {
-  width: 150px;
+  width: 125px;
 }
 
 .nav__searchbar {
-  width: 700px;
-  height: 50px;
+  width: 400px;
+  height: 30px;
 }
-
-.header__icons {
-  color: white;
-}
-
 .fa-shopping-cart,
 .fa-user,
-.fa-bell {
-  font-size: 40px;
-  padding: 0px 8px;
+.fa-bell,
+.fa-search {
+  font-size: 25px;
+  color: white;
+  margin-left: 8px;
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(27, 32, 61, 0.9);
 }
 
 .header__nav {
-  background-color: rgba(27, 32, 61, 0.9);
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-weight: 650;
+  margin: 8px 0px;
 }
 
 .nav__li {
@@ -62,21 +63,23 @@ header {
 .nav__links {
   color: white;
   padding: 0px 8px;
+  font-weight: bold;
 }
 
 main {
   grid-area: main;
-  width: 100%;
-  display: grid;
-  justify-content: center;
+  border: solid 1px red;
+  width: 70%;
+  margin: auto;
 }
 
-section {
-  width: 1000px;
+.hero {
+  border: solid 1px khaki;
+  width: 100%;
 }
 
 .hero__banner {
-  height: 500px;
+  height: 400px;
   width: 100%;
   background-color: hotpink;
 }
@@ -98,55 +101,51 @@ section {
 }
 
 .games {
-  height: 460px;
   display: grid;
   grid-gap: 16px;
   grid-template-areas:
-    "main-game gameOne gameTwo gameThree"
-    "main-game gameFour gameFive gameSix";
+    "box1 box2 box3 box4"
+    "box1 box5 box6 box7";
 }
 
-.main-game {
-  background-color: rosybrown;
-  grid-area: main-game;
+.box1 {
+  background-color: lemonchiffon;
+  height: 100%;
+  grid-area: box1;
 }
 
-.gameOne {
-  background-color: rosybrown;
-  grid-area: gameOne;
+.box2 {
+  background-color: lightpink;
+  height: 200px;
+  grid-area: box2;
 }
-
-.gameTwo {
-  background-color: yellow;
-  grid-area: gameTwo;
+.box3 {
+  background-color: lightgreen;
+  height: 200px;
+  grid-area: box3;
 }
-
-.gameThree {
-  background-color: pink;
-  grid-area: gameThree;
+.box4 {
+  background-color: lightseagreen;
+  height: 200px;
+  grid-area: box4;
 }
-
-.gameFour {
-  background-color: purple;
-  grid-area: gameFour;
+.box5 {
+  background-color: lightsteelblue;
+  height: 200px;
+  grid-area: box5;
 }
-
-.gameFive {
-  background-color: orange;
-  grid-area: gameFive;
+.box6 {
+  background-color: limegreen;
+  height: 200px;
+  grid-area: box6;
 }
-
-.gameSix {
-  background-color: gray;
-  grid-area: gameSix;
-}
-
-.home__recommended {
-  margin: 8px 0px;
+.box7 {
+  background-color: lightsalmon;
+  height: 200px;
+  grid-area: box7;
 }
 
 .recommended {
-  height: 260px;
   display: grid;
   grid-gap: 16px;
   grid-template-areas: "recommendedOne recommendedTwo recommendedThree recommendedFour";
@@ -155,27 +154,31 @@ section {
 .recommendedOne {
   grid-area: recommendedOne;
   background-color: teal;
+  height: 200px;
 }
 
 .recommendedTwo {
   grid-area: recommendedTwo;
   background-color: yellow;
+  height: 200px;
 }
 
 .recommendedThree {
   grid-area: recommendedThree;
   background-color: lightblue;
+  height: 200px;
 }
 
 .recommendedFour {
   grid-area: recommendedFour;
   background-color: orange;
+  height: 200px;
 }
 
 footer {
+  grid-area: footer;
   margin-top: 32px;
   grid-area: footer;
-  height: 100px;
   align-items: center;
   display: flex;
   background-color: #6a6a6a;
@@ -185,6 +188,8 @@ footer {
 .footer__flex {
   display: flex;
   flex-wrap: wrap;
+  border: black solid 1px;
+  width: 70%;
 }
 
 .footer__nav {
@@ -211,4 +216,77 @@ footer {
 
 .footer__link {
   color: lightgrey;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  header {
+    flex-wrap: wrap;
+  }
+  .header__top {
+    display: grid;
+    grid-template-areas: "logo icons" "search search";
+  }
+  .logo {
+    grid-area: logo;
+  }
+  .search {
+    grid-area: search;
+  }
+  .nav__searchbar {
+    width: 100%;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main {
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+    border: solid 1px magenta;
+  }
+  .search {
+    width: 100%;
+    border: solid 1px hotpink;
+  }
+  .icons {
+    width: 100%;
+    border: solid 1px forestgreen;
+  }
+  .sale__headings {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sale3 {
+    flex: 1;
+  }
+  .games {
+    grid-gap: 10px;
+    grid-template-areas:
+      "box1 box1"
+      "box2 box3"
+      "box4 box5"
+      "box6 box7";
+  }
+
+  .box1 {
+    height: 200px;
+  }
+  .recommended {
+    display: grid;
+    grid-template-areas:
+      "recommendedOne recommendedTwo"
+      "recommendedThree recommendedFour";
+  }
+  .footer__flex {
+    width: 100%;
+  }
 }
