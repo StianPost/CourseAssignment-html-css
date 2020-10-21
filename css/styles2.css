@@ -229,7 +229,9 @@ footer {
   }
   .header__top {
     display: grid;
-    grid-template-areas: "logo icons" "search search";
+    grid-template-areas:
+      "logo icons"
+      "search search";
   }
   .logo {
     grid-area: logo;
