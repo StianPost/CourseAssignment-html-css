@@ -18,6 +18,7 @@ header {
   top: 0px;
   left: 0px;
   background-color: rgba(14, 6, 95, 0.9);
+  margin-bottom: 16px;
 }
 
 .header__top {
@@ -34,6 +35,7 @@ header {
   width: 400px;
   height: 30px;
 }
+
 .fa-shopping-cart,
 .fa-user,
 .fa-bell,
@@ -79,9 +81,15 @@ main {
 }
 
 .hero__banner {
-  height: 400px;
+  height: 600px;
   width: 100%;
   background-color: hotpink;
+}
+
+.cyberpunk {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .sale__headings {
@@ -106,6 +114,7 @@ main {
   grid-template-areas:
     "box1 box2 box3 box4"
     "box1 box5 box6 box7";
+  margin: 8px 0px;
 }
 
 .box1 {
@@ -113,7 +122,6 @@ main {
   height: 100%;
   grid-area: box1;
 }
-
 .box2 {
   background-color: lightpink;
   height: 200px;
@@ -146,29 +154,26 @@ main {
 }
 
 .recommended {
+  margin: 8px 0px;
   display: grid;
   grid-gap: 16px;
   grid-template-areas: "recommendedOne recommendedTwo recommendedThree recommendedFour";
 }
-
 .recommendedOne {
   grid-area: recommendedOne;
   background-color: teal;
   height: 200px;
 }
-
 .recommendedTwo {
   grid-area: recommendedTwo;
   background-color: yellow;
   height: 200px;
 }
-
 .recommendedThree {
   grid-area: recommendedThree;
   background-color: lightblue;
   height: 200px;
 }
-
 .recommendedFour {
   grid-area: recommendedFour;
   background-color: orange;
@@ -234,33 +239,31 @@ footer {
   }
   .logo {
     grid-area: logo;
+    border: solid 1px magenta;
   }
-  .search {
+  .header__search {
     grid-area: search;
+    border: solid 1px hotpink;
   }
   .nav__searchbar {
-    width: 100%;
+    width: 85%;
+    border: solid 2px red;
   }
   .icons {
     display: flex;
     flex-direction: row-reverse;
+    border: solid 1px forestgreen;
   }
+  .fa-shopping-cart,
+  .fa-user,
+  .fa-bell {
+    font-size: 25px;
+  }
+
   main {
     width: 100%;
   }
 
-  .logo {
-    width: 100%;
-    border: solid 1px magenta;
-  }
-  .search {
-    width: 100%;
-    border: solid 1px hotpink;
-  }
-  .icons {
-    width: 100%;
-    border: solid 1px forestgreen;
-  }
   .sale__headings {
     display: flex;
     flex-wrap: wrap;
