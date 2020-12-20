@@ -1,21 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gamehub a internet storefront">
-    <link href="/css/styles.css" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gamehub's checkout page" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e4c5249ba5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-
+      <div class="header__top">
+        <div class="h1hidden"><h1>Checkout</h1></div>
+        <div class="logo">
+          <a href="/index.html"
+            ><img
+              class="logo__img"
+              src="/img/GameHub_Logo.png"
+              alt="image of the gamehub log"
+          /></a>
+        </div>
+        <div class="header__search">
+          <input class="nav__searchbar" type="text" placeholder="search" />
+          <a href="/search-result.html"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="icons">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="account-page.html"><i class="fas fa-user"></i></a>
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__nav">
+          <nav class="header__navigation">
+            <ul>
+              <li class="nav__li">
+                <a href="/store.html" class="nav__links">Store</a>
+              </li>
+              <li class="nav__li">
+                <a href="/contact-us.html" class="nav__links">Contact us</a>
+              </li>
+              <li class="nav__li">
+                <a href="/sellgame.html" class="nav__links">Sell Game</a>
+              </li>
+              <li class="nav__li">
+                <a href="create-account.html" class="nav__links">Sign In</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="checkoutMain">
+      <div class="checkoutCart__top">
+        <div class="checkoutCart">
+          <h2>Your Shopping cart</h2>
+          <div class="checkout__underline"></div>
+          <div class="checkoutCart__top--picture"></div>
+          <h2>Kingdoms of Amalure: Re-reckoning</h2>
+          <div class="checkoutCart__top--info">
+            <p>Windows</p>
+            <p>190.50kr</p>
+          </div>
+        </div>
+      </div>
+      <h2 class="checkout__H2">Payment info</h2>
+      <div class="checkout__underline"></div>
+      <div class="checkout">
+        <div class="checkoutMethod">
+          <div class="checkoutMethod__left">
+            <label for="checkoutMethod__left--method" class="checkout__label"
+              >Select payment method*</label
+            >
+            <select
+              class="checkout__inpSelect"
+              name="checkoutMethod__left--method"
+              id="checkoutMethod__left--method"
+            >
+              <option value="visa">Visa</option>
+              <option value="paypal">Paypal</option>
+              <option value="credit">Credit</option>
+              <option value="gold">Gold</option>
+              <option value="bitcoin">Bitcoin</option>
+            </select>
+            <label for="checkoutMethod__left--cNumber" class="checkout__label"
+              >Card Number*</label
+            >
+            <input
+              class="checkout__inpLong"
+              type="text"
+              name="checkoutMethod__left--cNumber"
+              id="checkoutMethod__left--cNumber"
+            />
+          </div>
+          <div class="checkoutMethod__right">
+            <div>
+              <label
+                for="checkoutMethod__right--expdate"
+                class="checkout__label"
+                >Exp date*</label
+              >
+              <input
+                class="checkout__inpShort"
+                type="text"
+                name="checkoutMethod__right--expdate"
+                id="checkoutMethod__right--expdate"
+              />
+            </div>
+            <div>
+              <label
+                for="checkoutMethod__right--sNumber"
+                class="checkout__label"
+                >Security Number*</label
+              >
+              <input
+                class="checkout__inpShort"
+                type="text"
+                name="checkoutMethod__right--sNumber"
+                id="checkoutMethod__right--sNumber"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="checkoutAddress">
+          <h2 class="checkout__H2">Billing information</h2>
+          <div class="checkout__underline"></div>
 
+          <div class="checkout__nameCity">
+            <div class="checkout__divider">
+              <label class="checkout__label" for="firstname">First Name:</label>
+              <input
+                class="checkout__inpLong"
+                type="text"
+                name="firstname"
+                id="firstname"
+              />
+            </div>
+
+            <div class="checkout__divider">
+              <label class="checkout__label" for="checkout__city">City*</label>
+              <select
+                class="checkout__inpSelect"
+                name="checkout__city"
+                id="checkout__city"
+              >
+                <option value="oslo">Oslo</option>
+                <option value="trondheim">Trondheim</option>
+                <option value="stavanger">Stavanger</option>
+                <option value="arendal">Arendal</option>
+                <option value="hell">Hell</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="checkout__divider">
+            <label class="checkout__label" for="lastname">Last Name:</label>
+            <input
+              class="checkout__inpLong"
+              type="text"
+              name="lastname"
+              id="lastname"
+            />
+          </div>
+
+          <div class="checkout__addressZip">
+            <div class="checkout__divider">
+              <label class="checkout__label" for="checkout__address1"
+                >Billing address*</label
+              >
+              <input
+                class="checkout__inpLong"
+                type="text"
+                name="checkout__address1"
+                id="checkout__address1"
+              />
+            </div>
+            <div class="checkout__divider">
+              <label class="checkout__label" for="checkout__zip"
+                >Zip or postal code*</label
+              >
+              <input
+                class="checkout__inpShort"
+                type="text"
+                name="checkout__zip"
+                id="checkout__zip"
+              />
+            </div>
+          </div>
+
+          <div class="checkout__address">
+            <label class="checkout__label" for="checkout__address2"
+              >Billig address, line 2</label
+            >
+            <input
+              class="checkout__inpLong"
+              type="text"
+              name="checkout__address2"
+              id="checkout__address2"
+            />
+          </div>
+          <div class="checkout__countryPhone">
+            <div class="checkout__divider">
+              <label class="checkout__label" for="checkout__phone"
+                >Phone number:</label
+              >
+              <input
+                class="checkout__inpLong"
+                type="tel"
+                name="checkout__phone"
+                id="checkout__phone"
+              />
+            </div>
+            <div class="checkout__divider">
+              <label class="checkout__label" for="checkout__country"
+                >Country*</label
+              >
+              <select
+                class="checkout__inpSelect"
+                name="checkout__country"
+                id="checkout__country"
+              >
+                <option value="norway">Norway</option>
+                <option value="sweden">Sweden</option>
+                <option value="denmark">Denmark</option>
+                <option value="japan">Japan</option>
+                <option value="narnia">Narnia</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <a class="acceptButton" href="checkout-success.html"> Continue </a>
+      </div>
     </main>
     <footer>
-
+      <div class="footer__flex">
+        <div class="footer__nav">
+          <ul>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Submit Your Game</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/contact-us.html">FAQ</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/sellgame.html">Sell Game</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__icons">
+          <ul>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fas fa-share-alt"></i
+              ></a>
+            </li>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__nav__legal">
+          <ul>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Legal</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,0 +1,110 @@
+.searchMain {
+  grid-area: main;
+  width: 70%;
+  min-height: 78vh;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "searchTop searchTop searchTop searchTop"
+    "searchSidebar searchGames searchGames searchGames";
+}
+.searchGames h2 {
+  margin-left: 208px;
+}
+.searchTop {
+  grid-area: searchTop;
+}
+.search__filter {
+  display: none;
+}
+.search__underline {
+  border-top: var(--underline-colour) 1px solid;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.search__underline2 {
+  border-top: var(--underline-colour) 1px solid;
+  margin-right: 10%;
+  margin-bottom: 8px;
+}
+.searchSidebar {
+  grid-area: searchSidebar;
+}
+
+.searchGames {
+  grid-area: searchGames;
+}
+.searchGame__1,
+.searchGame__2,
+.searchGame__3,
+.searchGame__4 {
+  margin-bottom: 8px;
+  background-color: #d4d4d4;
+  height: 155px;
+}
+.game__pic {
+  height: 154px;
+  width: 200px;
+  float: left;
+  background-image: url(/img/Kingdom-amalure-RE.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.spillinfo {
+  display: flex;
+}
+
+.spillinfo1,
+.spillinfo2,
+.spillinfo3 {
+  width: 33%;
+}
+
+.spillinfo3__price {
+  font-weight: bold;
+}
+.spillinfo p {
+  margin: 5% 0%;
+}
+
+.spillinfo span {
+  margin-left: 8px;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .searchMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .searchMain {
+    width: 95%;
+    grid-template-areas:
+      "searchTop searchTop searchTop"
+      "searchGames searchGames searchGames";
+  }
+  .search__filter {
+    display: block;
+    width: 104px;
+    height: 32px;
+    background-color: var(--form-background);
+    border: solid 1px var(--form-border);
+    margin-bottom: 8px;
+  }
+  .spillinfo1,
+  .spillinfo2 {
+    display: none;
+  }
+  .spillinfo3 {
+    margin-top: 8px;
+    margin-left: 8px;
+  }
+  .searchSidebar {
+    display: none;
+  }
+}

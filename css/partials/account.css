@@ -1,0 +1,79 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+.accountMain {
+  grid-area: main;
+  width: 60%;
+  margin: auto;
+  min-height: 78vh;
+}
+
+.accountTop {
+  display: flex;
+  width: 70%;
+  margin: 32px 0px;
+}
+
+.accountTop__avatar {
+  width: 120px;
+  height: 120px;
+  border: black solid 1px;
+  margin-right: 16px;
+  background-image: url(https://avatarfiles.alphacoders.com/506/thumb-1920-50649.jpg);
+  background-size: cover;
+}
+
+.accountBot {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+  width: 70%;
+}
+.accountBot__subhead {
+  margin-right: 8px;
+}
+.accountBot__subhead:hover,
+.accountBot__subhead--edit:hover {
+  font-weight: bold;
+}
+.accountBot__subheader {
+  display: flex;
+}
+.edit {
+  justify-items: flex-end;
+}
+
+.account__underline {
+  width: 70%;
+  border-top: black solid 1px;
+  margin: 8px 0px 16px 0px;
+}
+.accountBox {
+  width: 70%;
+  height: 300px;
+  background-color: var(--form-background);
+  border: solid 1px var(--form-border);
+}
+.accountBox__text {
+  margin: 8px;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .accountMain {
+    width: 90%;
+  }
+  .accountTop,
+  .accountBot,
+  .account__underline,
+  .accountBox,
+  .accountBox__text {
+    width: 100%;
+  }
+}

@@ -1,0 +1,97 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.checkoutMain {
+  grid-area: main;
+  border: solid 1px red;
+  width: 70%;
+  margin: auto;
+}
+.checkout__H2 {
+  margin-top: 16px;
+}
+.checkout__underline {
+  border-top: solid 1px var(--underline-colour);
+  margin-bottom: 16px;
+}
+.checkoutCart__top {
+  overflow: auto;
+}
+.checkoutCart__top--picture {
+  width: 200px;
+  height: 100px;
+  background-image: url(/img/Kingdom-amalure-RE.jpg);
+  background-size: cover;
+  float: left;
+}
+
+.checkoutCart__top--info {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-top: 60px;
+  margin-left: 208 px;
+}
+
+.checkoutMethod {
+  display: flex;
+}
+.checkoutMethod__right {
+  margin-left: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+.checkout__nameCity,
+.checkout__addressZip,
+.checkout__countryPhone {
+  display: flex;
+}
+
+.checkout__divider {
+  margin-right: 8px;
+}
+.checkout__label {
+  display: block;
+  margin-top: 8px;
+}
+
+.checkout__inpLong {
+  width: 200px;
+  height: 30px;
+  background-color: var(--form-background);
+  border: solid 1px var(--form-border);
+}
+.checkout__inpShort {
+  width: 100px;
+  height: 30px;
+  background-color: var(--form-background);
+  border: solid 1px var(--form-border);
+}
+.checkout__inpSelect {
+  width: 104px;
+  height: 32px;
+  background-color: var(--form-background);
+  border: solid 1px var(--form-border);
+}
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .checkoutMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .checkoutMain {
+    width: 98%;
+  }
+  .checkoutMethod {
+    flex-direction: column;
+  }
+  .checkoutMethod__right {
+    margin-left: 0px;
+  }
+}

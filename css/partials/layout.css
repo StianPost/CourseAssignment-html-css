@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500&family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Hind", Tahoma, Verdana sans-serif;
+}
+h1 {
+  font-weight: 900;
+}
+h2 {
+  font-weight: 900;
+  font-size: 1rem;
+}
+h3 {
+  font-weight: 600;
+}
+h4 {
+  font-weight: 300;
+}
+p {
+  font-size: 1rem;
+  font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* button styling */
+
+.acceptButton {
+  margin-top: 16px;
+  width: 200px;
+  height: 50px;
+  background-color: var(--button-Dbackground);
+  color: var(--button-color);
+  border: solid 2px var(--button-Dbackground);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.acceptButton:hover {
+  background-color: var(--button-color);
+  color: var(--button-Dbackground);
+}
+
+.contactsubmit {
+  display: flex;
+  margin-top: 32px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: var(--button-Abackground);
+  border: solid 2px var(--button-Abackground);
+  color: var(--button-color);
+  justify-content: center;
+  align-items: center;
+}
+.contactsubmit:hover {
+  background-color: var(--button-color);
+  color: var(--button-Abackground);
+  border: solid 2px var(--button-Abackground);
+}
+
+.createAcc__submit {
+  margin-top: 24px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: var(--button-Bbacground);
+  color: var(--button-color);
+  border: solid 2px var(--button-Bbacground);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createAcc__submit:hover {
+  background-color: var(--button-color);
+  color: var(--button-Bbacground);
+}

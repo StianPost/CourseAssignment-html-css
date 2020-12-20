@@ -1,0 +1,125 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+.sellMain {
+  grid-area: main;
+  width: 70%;
+  margin: auto;
+  min-height: 78vh;
+}
+
+.sellHeader__underline {
+  margin-top: 8px;
+  border-top: var(--underline-colour) solid 1px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.sellGrid {
+  display: grid;
+  grid-template-areas:
+    "sellGrid__left sellGrid__right"
+    "sellGrid__bottom sellGrid__bottom";
+}
+
+.sellGrid__right {
+  grid-area: sellGrid__right;
+}
+.sellGrid__left {
+  grid-area: sellGrid__left;
+}
+.sellGrid__bottom {
+  grid-area: sellGrid__bottom;
+}
+
+.gamebox {
+  display: flex;
+}
+.gamebox__box--cover {
+  background-image: url(/img/Gamecover-example.png);
+}
+.gamebox__box--game {
+  background-image: url(/img/Game-example.png);
+}
+.gamebox__box--cover,
+.gamebox__box--game {
+  width: 200px;
+  height: 200px;
+  margin-right: 8px;
+  background-position: center;
+  background-size: contain;
+}
+
+.sellGame__label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.sellGame__message {
+  width: 70%;
+  display: block;
+}
+
+.sellGame__box {
+  width: 300px;
+  height: 40px;
+}
+.sellGame__box2 {
+  width: 304px;
+  height: 44px;
+}
+.sellGame__box3 {
+  width: 408px;
+  height: 40px;
+}
+.sellGame__box,
+.sellGame__box2,
+.sellGame__box3,
+.sellGame__message {
+  background-color: var(--form-background);
+  border: solid 1px var(--form-border);
+  resize: none;
+}
+
+h3 {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .sellMain {
+    width: 90%;
+  }
+  .sellGrid {
+    grid-template-areas:
+      "sellGrid__right"
+      "sellGrid__left"
+      "sellGrid__bottom";
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .sellMain {
+    width: 90%;
+  }
+  .sellGrid {
+    grid-template-areas:
+      "sellGrid__right"
+      "sellGrid__left"
+      "sellGrid__bottom";
+  }
+  .gamebox {
+    flex-direction: column;
+  }
+  .sellGame__box3 {
+    width: 300px;
+  }
+  .sellGame__message {
+    width: 95%;
+  }
+}

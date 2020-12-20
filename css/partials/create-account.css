@@ -1,0 +1,58 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.createMain {
+  grid-area: main;
+  width: 70%;
+  margin: auto;
+  min-height: 78vh;
+}
+
+.createAcc__H2 {
+  margin-top: 32px;
+}
+
+.createForm__container {
+  display: flex;
+}
+
+.createAcc__right {
+  align-self: flex-end;
+}
+
+.create__label {
+  display: block;
+  margin: 16px 0px 8px 0px;
+}
+.createAcc__box {
+  margin-right: 16px;
+  width: 300px;
+  height: 40px;
+  background-color: var(--form-background);
+}
+.createAcc__ua {
+  margin-top: 32px;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .createMain {
+    width: 95%;
+  }
+  .createForm__container {
+    flex-direction: column;
+  }
+  .createAcc__right {
+    align-self: flex-start;
+  }
+  .createAcc__box {
+    width: 300px;
+  }
+}

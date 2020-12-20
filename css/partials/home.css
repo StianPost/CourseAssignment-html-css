@@ -1,0 +1,181 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.home__main {
+  grid-area: main;
+  width: 70%;
+  margin: auto;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero__banner {
+  height: 550px;
+  width: 100%;
+  background-image: url(/img/Cyberpunk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__banner:hover {
+  background-size: 90%;
+}
+
+.sale__headings {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8px 0px;
+}
+
+.sale1,
+.sale2 {
+  flex: 1;
+}
+.sale3 {
+  flex: 2;
+}
+.sale1:hover,
+.sale2:hover,
+.sale3:hover {
+  font-weight: bold;
+}
+.home__underline {
+  border-top: solid 1px var(--underline-colour);
+  width: 100%;
+}
+
+.featuredGames {
+  margin-top: 8px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-areas:
+    "featured1 featured2 featured3 featured4"
+    "featured1 featured5 featured6 featured7";
+}
+
+.featuredGames__gameOne {
+  background-image: url(/img/COD.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  min-height: 350px;
+  grid-area: featured1;
+}
+.featuredGames__gameTwo {
+  background-image: url(/img/Fallout\ 4.png);
+  grid-area: featured2;
+}
+.featuredGames__gameThree {
+  background-image: url(/img/GTA5.png);
+  grid-area: featured3;
+}
+.featuredGames__gameFour {
+  background-image: url(/img/Overwatch.png);
+  grid-area: featured4;
+}
+.featuredGames__gameFive {
+  background-image: url(/img/PayDay\ 2.png);
+  grid-area: featured5;
+}
+.featuredGames__gameSix {
+  background-image: url(/img/PUBG.png);
+  grid-area: featured6;
+}
+.featuredGames__gameSeven {
+  background-image: url(/img/Sims\ 4.png);
+  grid-area: featured7;
+}
+.featuredGames__gameTwo,
+.featuredGames__gameThree,
+.featuredGames__gameFour,
+.featuredGames__gameFive,
+.featuredGames__gameSix,
+.featuredGames__gameSeven {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
+}
+
+.recommended {
+  margin: 8px 0px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-areas: "recommendedOne recommendedTwo recommendedThree recommendedFour";
+}
+.recommendedOne {
+  grid-area: recommendedOne;
+  background-image: url(/img/Skyrim\ SE.png);
+}
+.recommendedTwo {
+  grid-area: recommendedTwo;
+  background-image: url(/img/fallguys.png);
+}
+.recommendedThree {
+  grid-area: recommendedThree;
+  background-image: url(/img/Battlefield\ 4.png);
+}
+.recommendedFour {
+  grid-area: recommendedFour;
+  background-image: url(/img/Cities\ Skylines.png);
+}
+.recommendedOne,
+.recommendedTwo,
+.recommendedThree,
+.recommendedFour {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
+}
+@media (max-width: 1200px) /*Desktop*/ {
+  .home__main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .home__main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .home__main {
+    width: 100%;
+  }
+
+  .sale__headings {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sale3 {
+    flex: 1;
+  }
+  .featuredGames {
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "featured1 featured1"
+      "featured2 featured3"
+      "featured4 featured5"
+      "featured6 featured7";
+  }
+  .recommended {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "recommendedOne recommendedTwo"
+      "recommendedThree recommendedFour";
+  }
+  .footer__flex {
+    width: 100%;
+  }
+}

@@ -3,18 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Storepage of gamehub" />
+    <meta name="description" content="Gamehub account creation page" />
     <link href="/css/main.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/e4c5249ba5.js"
       crossorigin="anonymous"
     ></script>
-    <title>Store Gamehub</title>
+    <title>Gamehub</title>
   </head>
   <body>
     <header>
       <div class="header__top">
-        <div class="h1hidden"><h1>Gamehubs Storepage</h1></div>
         <div class="logo">
           <a href="/index.html"
             ><img
@@ -54,7 +53,66 @@
         </div>
       </div>
     </header>
-    <main class="storeMain"></main>
+    <main class="createMain">
+      <h1 class="createAcc__H1">Create Account</h1>
+      <div class="contact__underline"></div>
+      <div>
+        <div class="createForm__container">
+          <div class="createAcc__left">
+            <label for="createAcc__name" class="create__label"
+              >Account Name</label
+            >
+            <input class="createAcc__box" id="createAcc__name" type="text" />
+
+            <label for="createAcc__email" class="create__label">Email</label>
+            <input class="createAcc__box" id="createAcc__email" type="email" />
+
+            <label for="createAcc__password" class="create__label"
+              >Password</label
+            >
+            <input
+              class="createAcc__box"
+              type="password"
+              id="createAcc__password"
+            />
+          </div>
+          <div class="createAcc__right">
+            <label for="createAcc__email--repeat" class="create__label"
+              >Repeat Email</label
+            >
+            <input
+              class="createAcc__box"
+              id="createAcc__email--repeat"
+              type="email"
+            />
+
+            <label for="createAcc__password" class="create__label"
+              >Repeat Password</label
+            >
+            <input
+              class="createAcc__box"
+              type="password"
+              id="createAcc__password--repeat"
+            />
+          </div>
+        </div>
+        <div class="createAcc__uaDiv">
+          <input
+            type="checkbox"
+            name="createAcc__ua"
+            id="createAcc__ua"
+            class="createAcc__ua"
+          />
+          <label for="createAcc__ua" class="createAcc__uaLabel"
+            >I agree to the terms of service of Game Hub User Agreement (Last
+            updated ??/??/????)</label
+          >
+        </div>
+        <a href="/index.html">
+          <div class="createAcc__submit">Create Account</div></a
+        >
+      </div>
+    </main>
     <footer>
       <div class="footer__flex">
         <div class="footer__nav">

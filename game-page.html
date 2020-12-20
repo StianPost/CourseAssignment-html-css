@@ -1,21 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gamehub a internet storefront">
-    <link href="/css/styles.css" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gamehub's spesific game page" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e4c5249ba5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-
+      <div class="header__top">
+        <div class="h1hidden"><h1>Search result</h1></div>
+        <div class="logo">
+          <a href="/index.html"
+            ><img
+              class="logo__img"
+              src="/img/GameHub_Logo.png"
+              alt="image of the gamehub log"
+          /></a>
+        </div>
+        <div class="header__search">
+          <input class="nav__searchbar" type="text" placeholder="search" />
+          <a href="/search-result.html"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="icons">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="account-page.html"><i class="fas fa-user"></i></a>
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__nav">
+          <nav class="header__navigation">
+            <ul>
+              <li class="nav__li">
+                <a href="/store.html" class="nav__links">Store</a>
+              </li>
+              <li class="nav__li">
+                <a href="/contact-us.html" class="nav__links">Contact us</a>
+              </li>
+              <li class="nav__li">
+                <a href="/sellgame.html" class="nav__links">Sell Game</a>
+              </li>
+              <li class="nav__li">
+                <a href="create-account.html" class="nav__links">Sign In</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <main>
-
+    <main class="gameMain">
+      <div class="heroContainer">
+        <div class="heroContainer__hero">
+          <div class="heroContainer__hero--sale">-50%</div>
+        </div>
+        <div class="gameInfo">
+          <div class="gameInfo__header">
+            <h2 class="gameInfo__header--title">
+              Kingdom of Amalure: Re-reckoning Fate Edition
+            </h2>
+            <div class="gameInfo__header--icons">
+              <i class="fab fa-xbox"></i>
+              <i class="fab fa-playstation"></i>
+              <i class="fab fa-windows"></i>
+            </div>
+            <div class="gameInfo__header--rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              <span>3,5/5</span>
+            </div>
+          </div>
+          <div class="gameInfo__price">
+            <h2 class="gameInfo__price--h2">190.50kr</h2>
+            <p class="gameInfo__price--p">381.00kr</p>
+          </div>
+          <div class="gameInfo__button">
+            <a href="/checkout-page.html">
+              <div class="gameInfo__button--atc">
+                <i class="fas fa-cart-plus"></i>
+                Add to cart
+              </div></a
+            >
+            <a href="/checkout-page.html"
+              ><div class="gameInfo__button--gtc">
+                <i class="fas fa-dolly"></i>
+                Go to cart
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="gameInfo__images">
+          <div class="gameInfo___images--showOne"></div>
+          <div class="gameInfo___images--showTwo"></div>
+          <div class="gameInfo___images--showThree"></div>
+          <div class="gameInfo___images--showFour"></div>
+        </div>
+        <div class="gameInfo__details">
+          <div class="gameInfo__details--description">
+            <h3>Description</h3>
+            <div class="gameInfo__underline"></div>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              architecto esse voluptatum officiis optio beatae magni
+              praesentium, odio laudantium, quisquam quos commodi temporibus
+              eaque ea totam saepe dolore adipisci quidem error minus enim ad!
+              Velit nulla, aperiam dignissimos repellendus nam sit impedit aut
+              beatae aspernatur labore, modi dolorum corrupti odit?
+            </div>
+          </div>
+          <div class="gameInfo__details--gameDetails">
+            <h3>Game details</h3>
+            <div class="gameInfo__underline"></div>
+            <div>
+              <p>
+                <span class="gameinfo__span">Genre:</span> Role-playing - Action
+                - Fantasy
+              </p>
+              <p>
+                <span class="gameinfo__span"> Works on:</span> Windows (7, 8,
+                10)
+              </p>
+              <p>
+                <span class="gameinfo__span"> Release date:</span> September 8,
+                2020
+              </p>
+              <p>
+                <span class="gameinfo__span"> Company:</span> KAIKO, Big Huge
+                Games / THQ Nordic GmbH
+              </p>
+              <p>
+                <span class="gameinfo__span"> Rating:</span> PEGI Rating: 18+
+                (Violence)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="gameInfo__systemHeader">
+          <h3>System Requirments</h3>
+          <div class="gameInfo__underline"></div>
+        </div>
+        <div class="gameInfo__system">
+          <div class="gameInfo__system--min">
+            <h4>Minimum:</h4>
+            <p>
+              <span class="gameinfo__span"> OS:</span> Windows 7, Windows, 8,
+              Windows 10 (64 bit)
+            </p>
+            <p>
+              <span class="gameinfo__span"> Processor:</span> Intel or AMD Dual
+              Core CPU 2.5 GHz
+            </p>
+            <p><span class="gameinfo__span"> Memory:</span> 4 GB RAM</p>
+            <p>
+              <span class="gameinfo__span"> Graphics:</span> DirectX 10 Feature
+              Level AMD or NVIDIA Card with 1 GB VRAM
+            </p>
+            <p><span class="gameinfo__span"> DirectX:</span> Version 11</p>
+            <p>
+              <span class="gameinfo__span"> Storage:</span> 40 GB available
+              space
+            </p>
+          </div>
+          <div class="gameInfo__system--max">
+            <h4>Recommended:</h4>
+            <p>
+              <span class="gameinfo__span"> OS:</span> Windows 7, Windows, 8,
+              Windows 10 (64 bit)
+            </p>
+            <p>
+              <span class="gameinfo__span"> Processor:</span> Intel or AMD Quad
+              Core CPU 3 GHz
+            </p>
+            <p><span class="gameinfo__span"> Memory:</span> 8 GB RAM</p>
+            <p>
+              <span class="gameinfo__span"> Graphics:</span> DirectX 11 Feature
+              Level AMD or NVIDIA Card with 2 GB VRAM
+            </p>
+            <p><span class="gameinfo__span"> DirectX:</span> Version 11</p>
+            <p>
+              <span class="gameinfo__span"> Storage:</span> 40 GB available
+              space
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-
+      <div class="footer__flex">
+        <div class="footer__nav">
+          <ul>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Submit Your Game</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/contact-us.html">FAQ</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/sellgame.html">Sell Game</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__icons">
+          <ul>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fas fa-share-alt"></i
+              ></a>
+            </li>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__nav__legal">
+          <ul>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Legal</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

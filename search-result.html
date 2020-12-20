@@ -1,21 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gamehub a internet storefront">
-    <link href="/css/styles.css" rel="stylesheet"/>
-    <title>Home</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gamehub's search result page" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e4c5249ba5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Gamehub Search Result</title>
+  </head>
+  <body>
     <header>
-
+      <div class="header__top">
+        <div class="h1hidden"><h1>Search Result</h1></div>
+        <div class="logo">
+          <a href="/index.html"
+            ><img
+              class="logo__img"
+              src="/img/GameHub_Logo.png"
+              alt="image of the gamehub log"
+          /></a>
+        </div>
+        <div class="header__search">
+          <input class="nav__searchbar" type="text" placeholder="search" />
+          <a href="/search-result.html"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="icons">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="account-page.html"><i class="fas fa-user"></i></a>
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__nav">
+          <nav class="header__navigation">
+            <ul>
+              <li class="nav__li">
+                <a href="/store.html" class="nav__links">Store</a>
+              </li>
+              <li class="nav__li">
+                <a href="/contact-us.html" class="nav__links">Contact us</a>
+              </li>
+              <li class="nav__li">
+                <a href="/sellgame.html" class="nav__links">Sell Game</a>
+              </li>
+              <li class="nav__li">
+                <a href="create-account.html" class="nav__links">Sign In</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="searchMain">
+      <div class="searchTop">
+        <h2>Filter</h2>
+        <div class="search__underline"></div>
+        <select
+          class="search__filter"
+          name="search__filter"
+          id="search__filter"
+        >
+          <option value="price">Price</option>
+          <option value="platform">Platform</option>
+          <option value="feature">Feature</option>
+        </select>
+      </div>
+      <section class="searchSidebar">
+        <div class="searchPrice">
+          <h3>Price</h3>
+          <div class="search__underline2"></div>
+          <div class="boxDivider">
+            <input type="checkbox" name="price__free" id="price__free" />
+            <label for="price__free">Free</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="price__discounted"
+              id="price__discounted"
+            />
+            <label for="price__discounted">Discounted</label>
+          </div>
+          <div class="boxDivider">
+            <input type="checkbox" name="under__50kr" id="under__50kr" />
+            <label for="under__50kr">Under 50kr</label>
+          </div>
+          <div class="boxDivider">
+            <input type="checkbox" name="under__100kr" id="under__100kr" />
+            <label for="under__100kr">Under 100kr</label>
+          </div>
+          <div class="boxDivider">
+            <input type="checkbox" name="under__200kr" id="under__200kr" />
+            <label for="under__200kr">Under 200kr</label>
+          </div>
+          <div class="boxDivider">
+            <input type="checkbox" name="200kr+" id="200kr+" />
+            <label for="200kr+">200kr+</label>
+          </div>
+        </div>
+        <div class="searchPlatform">
+          <h3>Platform</h3>
+          <div class="search__underline2"></div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__windows"
+              id="checkbox__windows"
+            />
+            <label for="checkbox__windows">Windows</label>
+          </div>
+          <div class="boxDivider">
+            <input type="checkbox" name="checkbox__ps4" id="checkbox__ps4" />
+            <label for="checkbox__ps4">Playstation 4</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__xboxOne"
+              id="checkbox__xboxOne"
+            />
+            <label for="checkbox__xboxOne">Xbox One</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__switch"
+              id="checkbox__switch"
+            />
+            <label for="checkbox__switch">Nintendo Switch</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__commodore64"
+              id="checkbox__commodore64"
+            />
+            <label for="checkbox__commodore64">Commodore 64</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__other"
+              id="checkbox__other"
+            />
+            <label for="checkbox__other">Other</label>
+          </div>
+        </div>
+        <div class="searchFeature">
+          <h3>Feature</h3>
+          <div class="search__underline2"></div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__single"
+              id="checkbox__single"
+            />
+            <label for="checkbox__single">Singleplayer</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__multi"
+              id="checkbox__multi"
+            />
+            <label for="checkbox__multi">Multiplayer</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__action"
+              id="checkbox__action"
+            />
+            <label for="checkbox__action">Action</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__adventure"
+              id="checkbox__adventure"
+            />
+            <label for="checkbox__adventure">Adventure</label>
+          </div>
+          <div class="boxDivider">
+            <input
+              type="checkbox"
+              name="checkbox__otherFeature"
+              id="checkbox__otherFeature"
+            />
+            <label for="checkbox__otherFeature">Other</label>
+          </div>
+        </div>
+      </section>
 
+      <section class="searchGames">
+        <div class="searchGame__1">
+          <a href="/game-page.html"><div class="game__pic"></div></a>
+          <a href="/game-page.html"
+            ><h2>Kingdom of Amalure: Re-reckoning</h2></a
+          >
+
+          <div class="spillinfo">
+            <div class="spillinfo1">
+              <p>
+                <span><i class="fab fa-xbox"></i></span> Xbox One
+              </p>
+              <p>
+                <span><i class="fab fa-playstation"></i></span>
+                Playstation 4
+              </p>
+              <p>
+                <span><i class="fab fa-windows"></i></span> Windows
+              </p>
+            </div>
+            <div class="spillinfo2">
+              <p>September 8, 2020</p>
+              <p>3,5/5</p>
+              <p>Digital Only</p>
+            </div>
+            <div class="spillinfo3">
+              <p class="spillinfo3__price">190,50kr</p>
+              <p>-50%</p>
+            </div>
+          </div>
+        </div>
+        <div class="searchGame__2">
+          <a href="/game-page.html"><div class="game__pic"></div></a>
+          <a href="/game-page.html"
+            ><h2>Kingdom of Amalure: Re-reckoning</h2></a
+          >
+
+          <div class="spillinfo">
+            <div class="spillinfo1">
+              <p>
+                <span><i class="fab fa-xbox"></i></span> Xbox One
+              </p>
+              <p>
+                <span><i class="fab fa-playstation"></i></span> Playstation 4
+              </p>
+              <p>
+                <span><i class="fab fa-windows"></i></span> Windows
+              </p>
+            </div>
+            <div class="spillinfo2">
+              <p>September 8, 2020</p>
+              <p>3,5/5</p>
+              <p>Digital Only</p>
+            </div>
+            <div class="spillinfo3">
+              <p class="spillinfo3__price">190,50kr</p>
+              <p>-50%</p>
+            </div>
+          </div>
+        </div>
+        <div class="searchGame__3">
+          <a href="/game-page.html"><div class="game__pic"></div></a>
+          <a href="/game-page.html"
+            ><h2>Kingdom of Amalure: Re-reckoning</h2></a
+          >
+
+          <div class="spillinfo">
+            <div class="spillinfo1">
+              <p>
+                <span><i class="fab fa-xbox"></i></span> Xbox One
+              </p>
+              <p>
+                <span><i class="fab fa-playstation"></i></span> Playstation 4
+              </p>
+              <p>
+                <span><i class="fab fa-windows"></i></span> Windows
+              </p>
+            </div>
+            <div class="spillinfo2">
+              <p>September 8, 2020</p>
+              <p>3,5/5</p>
+              <p>Digital Only</p>
+            </div>
+            <div class="spillinfo3">
+              <p class="spillinfo3__price">190,50kr</p>
+              <p>-50%</p>
+            </div>
+          </div>
+        </div>
+        <div class="searchGame__4">
+          <a href="/game-page.html"><div class="game__pic"></div></a>
+          <a href="/game-page.html"
+            ><h2>Kingdom of Amalure: Re-reckoning</h2></a
+          >
+
+          <div class="spillinfo">
+            <div class="spillinfo1">
+              <p>
+                <span><i class="fab fa-xbox"></i></span> Xbox One
+              </p>
+              <p>
+                <span><i class="fab fa-playstation"></i></span> Playstation 4
+              </p>
+              <p>
+                <span><i class="fab fa-windows"></i></span> Windows
+              </p>
+            </div>
+            <div class="spillinfo2">
+              <p>September 8, 2020</p>
+              <p>3,5/5</p>
+              <p>Digital Only</p>
+            </div>
+            <div class="spillinfo3">
+              <p class="spillinfo3__price">190,50kr</p>
+              <p>-50%</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-
+      <div class="footer__flex">
+        <div class="footer__nav">
+          <ul>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Submit Your Game</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/contact-us.html">FAQ</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/sellgame.html">Sell Game</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__icons">
+          <ul>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fas fa-share-alt"></i
+              ></a>
+            </li>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="footer__icons--list">
+              <a href="#" class="footer__icons--a"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__nav__legal">
+          <ul>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="#">Legal</a>
+            </li>
+            <li class="footer__nav__li">
+              <a class="footer__link" href="/contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

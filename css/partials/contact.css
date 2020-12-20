@@ -1,0 +1,74 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.contactMain {
+  grid-area: main;
+  width: 70%;
+  margin: auto;
+  min-height: 78vh;
+}
+
+.contact__underline {
+  border-top: 2px solid black;
+  margin: 8px 0px 24px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-areas: "contact__left contact__left contact__right";
+}
+
+.contact__left {
+  grid-area: contact__left;
+}
+
+.contactlabel {
+  display: block;
+  margin: 16px 0px 8px 0px;
+  font-size: 1rem;
+}
+
+.contact__box {
+  width: 200px;
+  height: 40px;
+  background-color: var(--form-background);
+}
+
+.contactmessage {
+  background-color: var(--form-background);
+  resize: none;
+}
+
+.contact__right {
+  grid-area: contact__right;
+}
+
+.contactH2 {
+  margin-top: 16px;
+}
+
+.contactP {
+  margin-top: 16px;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .contactMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .contactMain {
+    width: 100%;
+  }
+  .contactGrid {
+    grid-template-areas:
+      "contact__right"
+      "contact__left";
+  }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Gamehub a internet storefront" />
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/e4c5249ba5.js"
       crossorigin="anonymous"
@@ -13,7 +13,8 @@
   </head>
   <body>
     <header>
-      <section class="header__top">
+      <div class="header__top">
+        <div class="h1hidden"><h1>Gamehub</h1></div>
         <div class="logo">
           <a href="/index.html"
             ><img
@@ -23,18 +24,16 @@
           /></a>
         </div>
         <div class="header__search">
-          <form>
-            <input class="nav__searchbar" type="text" placeholder="search" />
-            <label for="nav__searchbar"><i class="fas fa-search"></i></label>
-          </form>
+          <input class="nav__searchbar" type="text" placeholder="search" />
+          <a href="/search-result.html"><i class="fas fa-search"></i></a>
         </div>
         <div class="icons">
           <i class="fas fa-shopping-cart"></i>
-          <i class="fas fa-user"></i>
+          <a href="account-page.html"><i class="fas fa-user"></i></a>
           <i class="fas fa-bell"></i>
         </div>
-      </section>
-      <section class="header__bottom">
+      </div>
+      <div class="header__bottom">
         <div class="header__nav">
           <nav class="header__navigation">
             <ul>
@@ -42,71 +41,63 @@
                 <a href="/store.html" class="nav__links">Store</a>
               </li>
               <li class="nav__li">
-                <a href="/contact-us.html" class="nav__links">Support</a>
-              </li>
-              <li class="nav__li">
                 <a href="/contact-us.html" class="nav__links">Contact us</a>
               </li>
               <li class="nav__li">
-                <a href="#" class="nav__links">Sell Game</a>
+                <a href="/sellgame.html" class="nav__links">Sell Game</a>
               </li>
               <li class="nav__li">
-                <a href="#" class="nav__links">Sign In</a>
+                <a href="create-account.html" class="nav__links">Sign In</a>
               </li>
             </ul>
           </nav>
         </div>
-      </section>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero__banner">
-          <img
-            src="/img/Webp.net-resizeimage.png"
-            alt="Picture of cyberpunk 2077"
-            class="cyberpunk"
-          />
-        </div>
-      </section>
-      <div class="sale__headings">
-        <p class="sale1">Now on Sale</p>
-        <p class="sale2">Featured deals</p>
-        <p class="sale3">Weekly sales</p>
       </div>
-      <section class="games">
-        <div class="box1">
-          1
-          <div class="buybtn"><i class="fas fa-plus-square"></i></div>
-        </div>
-        <div class="box2">2</div>
-        <div class="box3">3</div>
-        <div class="box4">4</div>
-        <div class="box5">5</div>
-        <div class="box6">6</div>
-        <div class="box7">7</div>
-      </section>
+    </header>
+    <main class="home__main">
+      <div class="hero">
+        <a class="hero__mainA" href="/game-page.html">
+          <div class="hero__banner"></div>
+        </a>
+      </div>
+      <div class="sale__headings">
+        <h3 class="sale1">Now on Sale</h3>
+        <h3 class="sale2">Featured deals</h3>
+        <h3 class="sale3">Weekly sales</h3>
+      </div>
+      <div class="home__underline"></div>
+      <div class="featuredGames">
+        <div class="featuredGames__gameOne"></div>
+        <div class="featuredGames__gameTwo"></div>
+        <div class="featuredGames__gameThree"></div>
+        <div class="featuredGames__gameFour"></div>
+        <div class="featuredGames__gameFive"></div>
+        <div class="featuredGames__gameSix"></div>
+        <div class="featuredGames__gameSeven"></div>
+      </div>
       <section>
-        <div><p class="home__recommended">Recommended</p></div>
+        <div><h3 class="home__recommended">Recommended</h3></div>
+        <div class="home__underline"></div>
         <div class="recommended">
-          <div class="recommendedOne">1</div>
-          <div class="recommendedTwo">2</div>
-          <div class="recommendedThree">3</div>
-          <div class="recommendedFour">4</div>
+          <div class="recommendedOne"></div>
+          <div class="recommendedTwo"></div>
+          <div class="recommendedThree"></div>
+          <div class="recommendedFour"></div>
         </div>
       </section>
     </main>
     <footer>
-      <section class="footer__flex">
+      <div class="footer__flex">
         <div class="footer__nav">
           <ul>
             <li class="footer__nav__li">
               <a class="footer__link" href="#">Submit Your Game</a>
             </li>
             <li class="footer__nav__li">
-              <a class="footer__link" href="#">FAQ</a>
+              <a class="footer__link" href="/contact-us.html">FAQ</a>
             </li>
             <li class="footer__nav__li">
-              <a class="footer__link" href="#">Sell Game</a>
+              <a class="footer__link" href="/sellgame.html">Sell Game</a>
             </li>
           </ul>
         </div>
@@ -138,11 +129,11 @@
               <a class="footer__link" href="#">Legal</a>
             </li>
             <li class="footer__nav__li">
-              <a class="footer__link" href="#">Contact Us</a>
+              <a class="footer__link" href="/contact-us.html">Contact Us</a>
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </footer>
   </body>
 </html>

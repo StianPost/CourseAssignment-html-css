@@ -1,0 +1,92 @@
+header {
+  grid-area: header;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(14, 6, 95, 0.9);
+  margin-bottom: 16px;
+  z-index: 5;
+}
+
+.h1hidden {
+  position: absolute;
+  top: -50px;
+}
+header a:hover,
+header i:hover {
+  color: gold;
+}
+.header__top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo__img {
+  width: 125px;
+}
+
+.nav__searchbar {
+  width: 400px;
+  height: 30px;
+}
+
+.fa-shopping-cart,
+.fa-user,
+.fa-bell,
+.fa-search {
+  font-size: 25px;
+  color: white;
+  margin-left: 8px;
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(27, 32, 61, 0.9);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 8px 0px;
+}
+
+.nav__li {
+  display: inline-block;
+}
+
+.nav__links {
+  color: white;
+  padding: 0px 8px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  header {
+    flex-wrap: wrap;
+  }
+  .header__top {
+    display: grid;
+    grid-template-areas: "logo icons" "search search";
+  }
+  .logo {
+    grid-area: logo;
+  }
+  .header__search {
+    grid-area: search;
+  }
+  .nav__searchbar {
+    width: 80%;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .fa-shopping-cart,
+  .fa-user,
+  .fa-bell {
+    font-size: 25px;
+  }
+}

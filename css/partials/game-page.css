@@ -1,0 +1,170 @@
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.gameMain {
+  grid-area: main;
+  width: 60%;
+  margin: auto;
+}
+.heroContainer__hero {
+  height: 550px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/Kingdom-amalure-RE.jpg);
+  position: relative;
+}
+.heroContainer__hero--sale {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  color: var(--button-color);
+  width: 80px;
+  height: 40px;
+  border: 2px solid var(--button-Cbackground);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-Cbackground);
+  border-radius: 10px 0px 0px 0px;
+  font-size: 1.5rem;
+}
+.gameInfo {
+  display: flex;
+}
+.gameInfo__header {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fa-xbox,
+.fa-playstation,
+.fa-windows,
+.fa-star,
+.fa-star-half-alt {
+  font-size: 1.5rem;
+}
+.gameInfo__price {
+  width: 10%;
+}
+.gameInfo__price--h2 {
+  font-size: 1.5rem;
+}
+.gameInfo__price--p {
+  color: grey;
+}
+.gameInfo__button {
+  width: 20%;
+  min-width: 160px;
+}
+.gameInfo__button--atc {
+  display: flex;
+  height: 60px;
+  background-color: var(--button-Dbackground);
+  color: var(--button-color);
+  border: solid 2px var(--button-Dbackground);
+  font-size: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gameInfo__button--atc:hover {
+  background-color: var(--button-color);
+  color: var(--button-Dbackground);
+}
+.gameInfo__button--gtc {
+  display: flex;
+  height: 40px;
+  background-color: var(--button-Cbackground);
+  border: solid 2px var(--button-Cbackground);
+  color: var(--button-color);
+  font-size: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gameInfo__button--gtc:hover {
+  background-color: var(--button-color);
+  color: var(--button-Cbackground);
+}
+.fa-cart-plus,
+.fa-dolly {
+  font-size: 1.5rem;
+  margin-left: 8px;
+}
+
+.gameInfo__images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.gameInfo___images--showOne,
+.gameInfo___images--showTwo,
+.gameInfo___images--showThree,
+.gameInfo___images--showFour {
+  width: 24%;
+  height: 200px;
+  background-image: url(/img/Kingdom-amalure-Re-GP.jpg);
+  background-size: cover;
+}
+.gameInfo__details {
+  display: flex;
+  justify-content: space-between;
+}
+.gameInfo__underline {
+  border-top: var(--underline-colour) solid 1px;
+  margin-bottom: 8px;
+}
+.gameInfo__details--description,
+.gameInfo__details--gameDetails,
+.gameInfo__system--min,
+.gameInfo__system--max {
+  width: 40%;
+  margin-bottom: 5%;
+}
+.gameinfo__span {
+  font-weight: 550;
+}
+
+.gameInfo__system {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) /*Desktop*/ {
+  .gameMain {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991px) /*Tablet*/ {
+  .gameMain {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) /*Mobile*/ {
+  .gameMain {
+    width: 100%;
+  }
+  .gameInfo__images {
+    display: none;
+  }
+  .gameInfo {
+    flex-direction: column;
+  }
+  .gameInfo__details {
+    flex-direction: column;
+  }
+  .gameInfo__system {
+    flex-direction: column;
+  }
+  .gameInfo__details--description,
+  .gameInfo__details--gameDetails,
+  .gameInfo__system--min,
+  .gameInfo__system--max {
+    width: 100%;
+  }
+}

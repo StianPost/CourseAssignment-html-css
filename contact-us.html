@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gamehub a internet storefront" />
-    <link href="/css/styles2.css" rel="stylesheet" />
+    <meta name="description" content="Gamehub's contact info page" />
+    <link href="/css/main.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/e4c5249ba5.js"
       crossorigin="anonymous"
@@ -13,88 +13,126 @@
   </head>
   <body>
     <header>
-      <section class="header__top">
+      <div class="header__top">
         <div class="logo">
-          <img
-            class="logo__img"
-            src="/img/GameHub_Logo.png"
-            alt="image of the gamehub log"
-          />
+          <a href="/index.html"
+            ><img
+              class="logo__img"
+              src="/img/GameHub_Logo.png"
+              alt="image of the gamehub log"
+          /></a>
         </div>
         <div class="header__search">
-          <form>
-            <input class="nav__searchbar" type="text" placeholder="search" />
-            <label for="nav__searchbar"><i class="fas fa-search"></i></label>
-          </form>
+          <input class="nav__searchbar" type="text" placeholder="search" />
+          <a href="/search-result.html"><i class="fas fa-search"></i></a>
         </div>
         <div class="icons">
           <i class="fas fa-shopping-cart"></i>
-          <i class="fas fa-user"></i>
+          <a href="account-page.html"><i class="fas fa-user"></i></a>
           <i class="fas fa-bell"></i>
         </div>
-      </section>
-      <section class="header__bottom">
+      </div>
+      <div class="header__bottom">
         <div class="header__nav">
           <nav class="header__navigation">
             <ul>
-              <li class="nav__li"><a href="#" class="nav__links">Store</a></li>
               <li class="nav__li">
-                <a href="#" class="nav__links">Support</a>
+                <a href="/store.html" class="nav__links">Store</a>
               </li>
               <li class="nav__li">
-                <a href="#" class="nav__links">Contact us</a>
+                <a href="/contact-us.html" class="nav__links">Contact us</a>
               </li>
               <li class="nav__li">
-                <a href="#" class="nav__links">Sell Game</a>
+                <a href="/sellgame.html" class="nav__links">Sell Game</a>
               </li>
               <li class="nav__li">
-                <a href="#" class="nav__links">Sign In</a>
+                <a href="create-account.html" class="nav__links">Sign In</a>
               </li>
             </ul>
           </nav>
         </div>
-      </section>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero__banner"></div>
-      </section>
-      <div class="sale__headings">
-        <p class="sale1">Now on Sale</p>
-        <p class="sale2">Featured deals</p>
-        <p class="sale3">Weekly sales</p>
       </div>
-      <section class="games">
-        <div class="box1">1</div>
-        <div class="box2">2</div>
-        <div class="box3">3</div>
-        <div class="box4">4</div>
-        <div class="box5">5</div>
-        <div class="box6">6</div>
-        <div class="box7">7</div>
-      </section>
-      <section>
-        <div><p class="home__recommended">Recommended</p></div>
-        <div class="recommended">
-          <div class="recommendedOne">1</div>
-          <div class="recommendedTwo">2</div>
-          <div class="recommendedThree">3</div>
-          <div class="recommendedFour">4</div>
+    </header>
+    <main class="contactMain">
+      <div class="contact__top">
+        <h1 class="contactH2">Contact Us</h1>
+        <div class="contact__underline"></div>
+      </div>
+      <div class="contactGrid">
+        <div class="contact__left">
+          <form class="contact__left--form">
+            <label for="contact__email" class="contactlabel">Email</label>
+            <input
+              type="email"
+              class="contact__box"
+              id="contact__email"
+              name="contact__email"
+            />
+
+            <label for="contact__subject" class="contactlabel">Subject</label>
+            <select
+              class="contact__box"
+              name="contact__subject"
+              id="contact__subject"
+            >
+              <option value="cakes">Cakes</option>
+              <option value="account">Account</option>
+              <option value="games">Games</option>
+              <option value="forums">Forums</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="contact__message" class="contactlabel">Message</label>
+            <textarea
+              class="contactmessage"
+              id="contact__message"
+              name="contact__message"
+              rows="7"
+              cols="45"
+            ></textarea>
+
+            <a class="contactsubmit" href="/index.html">Submit</a>
+          </form>
         </div>
-      </section>
+        <div class="contact__right">
+          <h2 class="contactH2">FAQ</h2>
+          <div class="contact__underline"></div>
+          <div>
+            <a href="https://createbakemake.com/strawberry-jelly-cheesecake/">
+              <p class="contactP">
+                <i class="fas fa-arrow-right"></i> How to bake a cheesecake
+              </p></a
+            >
+            <p class="contactP">
+              <i class="fas fa-arrow-right"></i> Where can I find coconuts?
+            </p>
+            <p class="contactP">
+              <i class="fas fa-arrow-right"></i> Is the starwars universe
+              utilized to it's full extent?
+            </p>
+            <p class="contactP">
+              <i class="fas fa-arrow-right"></i> Is Cameron an amazing teacher?
+            </p>
+            <p class="contactP">
+              <i class="fas fa-arrow-right"></i> Why does coding suck out my
+              life force?
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-      <section class="footer__flex">
+      <div class="footer__flex">
         <div class="footer__nav">
           <ul>
             <li class="footer__nav__li">
               <a class="footer__link" href="#">Submit Your Game</a>
             </li>
             <li class="footer__nav__li">
-              <a class="footer__link" href="#">FAQ</a>
+              <a class="footer__link" href="/contact-us.html">FAQ</a>
             </li>
             <li class="footer__nav__li">
-              <a class="footer__link" href="#">Sell Game</a>
+              <a class="footer__link" href="/sellgame.html">Sell Game</a>
             </li>
           </ul>
         </div>
@@ -126,11 +164,11 @@
               <a class="footer__link" href="#">Legal</a>
             </li>
             <li class="footer__nav__li">
-              <a class="footer__link" href="#">Contact Us</a>
+              <a class="footer__link" href="/contact-us.html">Contact Us</a>
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
