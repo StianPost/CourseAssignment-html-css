@@ -6,15 +6,14 @@ async function getGameAPI(url) {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    const resultArray = result.data;
-    console.log(resultArray);
+    console.log(result);
     loading.innerHTML = "";
 
-    resultArray.forEach((element) => {});
+    result.forEach((element) => {});
   } catch (error) {
     console.log(error);
     document.querySelector(".alert").innerHTML = showAlertTouser(
-      "An error occured",
+      error,
       "danger"
     );
   } finally {

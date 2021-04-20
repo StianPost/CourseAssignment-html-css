@@ -47,7 +47,11 @@ body {
   border-top: solid 1px var(--underline-colour);
   width: 100%;
 }
-
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .featuredGames {
   margin-top: 8px;
   display: grid;
