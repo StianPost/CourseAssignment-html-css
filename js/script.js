@@ -23,3 +23,5 @@ async function getGameAPI(url) {
   }
 }
 getGameAPI(gameAPI);
+
+//Redesign website to use flexbox or learn how to use grids with api
