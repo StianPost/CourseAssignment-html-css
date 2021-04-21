@@ -9,7 +9,7 @@ async function getGameAPI(url) {
     console.log(result);
     loading.innerHTML = "";
 
-    result.forEach((element) => {});
+    result.forEach((element) => {}); // Make this into a for loop
   } catch (error) {
     console.log(error);
     document.querySelector(".alert").innerHTML = showAlertTouser(
