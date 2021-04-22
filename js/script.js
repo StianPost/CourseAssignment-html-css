@@ -1,6 +1,7 @@
 const gameAPI =
   "https://noroffcors.herokuapp.com/http://postal.one/wp-json/wc/store/products";
 const loading = document.querySelector(".loading");
+const FGames = document.querySelector(".featuredGames");
 
 async function getGameAPI(url) {
   try {
@@ -9,7 +10,21 @@ async function getGameAPI(url) {
     console.log(result);
     loading.innerHTML = "";
 
-    result.forEach((element) => {}); // Make this into a for loop
+    FGames.innerHTML = `
+      <div class="gameCard cardMain">
+        <h1>Hello ${result[0].name}</h1>
+      </div>
+      <div class="gameCards">
+      </div>
+      `;
+    for (let i = 1; i < 7; i++) {
+      console.log([i]);
+      document.querySelector(".gameCards").innerHTML += `
+      <div class="gameCard Card${[i]}">
+      <h1>Hello ${result[i].name} </h1>
+      </div>
+      `;
+    }
   } catch (error) {
     console.log(error);
     document.querySelector(".alert").innerHTML = showAlertTouser(
