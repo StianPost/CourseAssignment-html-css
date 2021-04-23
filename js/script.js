@@ -12,7 +12,9 @@ async function getGameAPI(url) {
 
     FGames.innerHTML = `
       <div class="gameCard cardMain">
-        <h1>Hello ${result[0].name}</h1>
+        <a href="game-page.html?id=${result[0].id}">
+          <img class="gameCardImg" src="${result[0].images[0].src}" alt="Image of ${result[0].name}"/>
+        </a>
       </div>
       <div class="gameCards">
       </div>
@@ -21,7 +23,11 @@ async function getGameAPI(url) {
       console.log([i]);
       document.querySelector(".gameCards").innerHTML += `
       <div class="gameCard Card${[i]}">
-      <h1>Hello ${result[i].name} </h1>
+        <a href="game-page.html?id=${result[i].id}">
+          <img class="gameCardImg" src="${
+            result[i].images[0].src
+          }" alt="Image of ${result[i].name}"/>
+        </a>
       </div>
       `;
     }
