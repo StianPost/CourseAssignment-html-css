@@ -31,6 +31,9 @@ p {
   font-size: 1rem;
   font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif;
 }
+a {
+  cursor: pointer;
+}
 
 /* button styling */
 
