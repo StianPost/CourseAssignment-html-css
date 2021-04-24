@@ -55,56 +55,8 @@ body {
 .featuredGames {
   margin-top: 8px;
   display: flex;
-  /* grid-gap: 16px;
-  grid-template-areas:
-    "featured1 featured2 featured3 featured4"
-    "featured1 featured5 featured6 featured7"; */
+  justify-content: center;
 }
-
-/* .featuredGames__gameOne {
-  background-image: url(/img/COD.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  min-height: 350px;
-  grid-area: featured1;
-} */
-/* .featuredGames__gameTwo {
-  background-image: url(/img/Fallout\ 4.png);
-  grid-area: featured2;
-}
-.featuredGames__gameThree {
-  background-image: url(/img/GTA5.png);
-  grid-area: featured3;
-}
-.featuredGames__gameFour {
-  background-image: url(/img/Overwatch.png);
-  grid-area: featured4;
-}
-.featuredGames__gameFive {
-  background-image: url(/img/PayDay\ 2.png);
-  grid-area: featured5;
-}
-.featuredGames__gameSix {
-  background-image: url(/img/PUBG.png);
-  grid-area: featured6;
-}
-.featuredGames__gameSeven {
-  background-image: url(/img/Sims\ 4.png);
-  grid-area: featured7;
-}
-.featuredGames__gameTwo,
-.featuredGames__gameThree,
-.featuredGames__gameFour,
-.featuredGames__gameFive,
-.featuredGames__gameSix,
-.featuredGames__gameSeven {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 200px;
-} */
 
 .gameCard {
   height: 250px;
@@ -136,6 +88,10 @@ body {
 .recommendedIMG {
   height: 300px;
   width: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
 }
 
 .recommendedOne,
