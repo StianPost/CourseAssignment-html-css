@@ -31,6 +31,16 @@ async function getGameAPI(url) {
       </div>
       `;
     }
+    for (let i = 4; i < 8; i++) {
+      console.log([i]);
+      document.querySelector(".recommended").innerHTML += `
+      <div class="recommendedCard">
+        <a class="recommendedIMG" href="game-page.html?id=${result[i].id}">
+          <img class="recommendedIMG" src="${result[i].images[0].src}" alt="Image of ${result[i].name}"/>
+        </a>
+      </div>
+      `;
+    }
   } catch (error) {
     console.log(error);
     document.querySelector(".alert").innerHTML = showAlertTouser(

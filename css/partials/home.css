@@ -109,7 +109,6 @@ body {
 .gameCard {
   height: 250px;
   width: 325px;
-  border: black 2px solid;
   margin: 5px;
 }
 .cardMain {
@@ -127,26 +126,18 @@ body {
 
 .recommended {
   margin: 8px 0px;
-  display: grid;
-  grid-gap: 16px;
-  grid-template-areas: "recommendedOne recommendedTwo recommendedThree recommendedFour";
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.recommendedOne {
-  grid-area: recommendedOne;
-  background-image: url(/img/Skyrim\ SE.png);
+.recommendedCard {
+  margin: 5px;
 }
-.recommendedTwo {
-  grid-area: recommendedTwo;
-  background-image: url(/img/fallguys.png);
+.recommendedIMG {
+  height: 300px;
+  width: 320px;
 }
-.recommendedThree {
-  grid-area: recommendedThree;
-  background-image: url(/img/Battlefield\ 4.png);
-}
-.recommendedFour {
-  grid-area: recommendedFour;
-  background-image: url(/img/Cities\ Skylines.png);
-}
+
 .recommendedOne,
 .recommendedTwo,
 .recommendedThree,
